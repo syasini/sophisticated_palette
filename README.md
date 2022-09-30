@@ -8,15 +8,15 @@ A [Streamlit](https://streamlit.io/) 🎈 web app to help you tell your data sto
 
 
 
-<img src="media/example_adopt.png" width="300">
+<img src="media/example_adopt.png" width="600">
 
 Use the code snippets to adopt the color palette and port it to matplotlib
 
-<img src="media/example_matplotlib.png" width="300">
+<img src="media/example_matplotlib.png" width="600">
 
 or plotly
 
-<img src="media/example_plotly.png" width="300">
+<img src="media/example_plotly.png" width="600">
 
 
 
