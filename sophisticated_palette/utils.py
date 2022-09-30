@@ -48,7 +48,6 @@ sort_func_dict = {
     "random": (lambda r, g, b: np.random.random())
 }
 
-
 def get_df_rgb(img, sample_size):
     """construct a sample RGB dataframe from image"""
 
@@ -121,8 +120,42 @@ def plot_rgb_3d(df_rgb):
         st.error("RGB plot can only be used for less than 2000 sample pixels.")
     else:
         colors = df_rgb.apply(rgb_to_hex, axis=1)
-        fig = px.scatter_3d(df_rgb, x='B', y='G', z='R',
+        fig = px.scatter_3d(df_rgb, x='R', y='G', z='B',
                 color=colors, size=[1]*df_rgb.shape[0],
                 opacity=0.7)
 
         st.plotly_chart(fig)
+
+
+def plot_hsv_3d(df):
+    """plot the sampled pixels in 3D RGB space"""
+    df_rgb = df.copy()
+    if df_rgb.shape[0] > 2000:
+        st.error("RGB plot can only be used for less than 2000 sample pixels.")
+
+    else:
+        df_rgb[["H","S",'V']]= df_rgb.apply(lambda x: pd.Series(colorsys.rgb_to_hsv(x.R/255.,x.G/255.,x.B/255.)).T, axis=1)
+        st.dataframe(df_rgb[["H","S",'V']])
+        colors = df_rgb[["R","G","B"]].apply(rgb_to_hex, axis=1)
+        fig = px.scatter_3d(df_rgb, x='H', y='S', z='V',
+                color=colors, size=[1]*df_rgb.shape[0],
+                opacity=0.7)
+
+        st.plotly_chart(fig)
+
+def print_praise():
+    """Yes, I'm that vain and superficial! 🙄 """
+
+    praise_quotes = [
+        '"I wish *Mona* was alive to see this masterpiece of an app! I\'m sure she would *smile* at it..."\n\n-- Leonarda va Dinci',
+        '"I wish *Mona* was alive to see this masterpiece of an app! I\'m sure she would *smile* at it..."\n\n-- Leonarda va Dinci',
+        '"When I stumbled upon this app, it was like I found a *pearl* among the oysetrs. Absolutely stunning! "\n\n-- Johannes Merveer',
+        '"I\'m sorry, what was that? Ah yes, great app. I use it every *night*. Five *stars*!"\n\n-- Vincent van Vogue',
+        '"We\'ve all been waiting years for an app to make a *big splash* like this, and now it\'s finally here!\n[Can you hand me that towel please?]"\n\n-- David Hockknee',
+        '"It makes such a great *impression* on you, doesn\'t it? I know where I\'ll be getting my palette for painting the next *sunrise*!"\n\n-- Cloud Moanet',
+        '"Maybe some other time... [Can I get a gin and tonic please?]"\n\n-- Edward Jumper',
+    ]
+
+    title = "[imaginary] **Praise for Sophisticated Palette**\n\n"
+    random_index = np.random.randint(len(praise_quotes))
+    return title + praise_quotes[random_index]
