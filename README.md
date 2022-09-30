@@ -23,3 +23,5 @@ or `plotly`
 <img src="media/example_plotly.png" width="500">
 
 It's that simple! Now why are you still here? Go check out the [app](https://syasini-sophisticated-palette-app-dkc725.streamlitapp.com/) and have fun. 
+
+And if you feel like giving me a pat on the back press the :star: button so I have something to count before going to sleep at night... 
