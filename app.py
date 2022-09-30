@@ -11,7 +11,9 @@ from PIL import Image, ImageEnhance
 import streamlit as st
 
 sys.path.insert(0, ".")
-from sophisticated_palette.utils import show_palette, model_dict, get_palette, sort_func_dict, store_palette, display_matplotlib_code, display_plotly_code, get_df_rgb, enhancement_range, plot_rgb_3d
+from sophisticated_palette.utils import show_palette, model_dict, get_palette, \
+    sort_func_dict, store_palette, display_matplotlib_code, display_plotly_code,\
+     get_df_rgb, enhancement_range, plot_rgb_3d, plot_hsv_3d, print_praise
 
 
 gallery_files = glob(os.path.join(".", "images", "*"))
@@ -35,8 +37,8 @@ sample_size = int(st.sidebar.number_input("sample size", min_value=10, max_value
 # Image Enhancement
 enhancement_categories = enhancement_range.keys()
 enh_expander = st.sidebar.expander("Image Enhancements", expanded=False)
-
 with enh_expander:
+    
     if st.button("reset"):
         for cat in enhancement_categories:
             if f"{cat}_enhancement" in st.session_state:
@@ -50,6 +52,7 @@ enhancement_factor_dict = {
                             key=f"{cat}_enhancement")
     for cat in enhancement_categories
 }
+enh_expander.info("**Try the following**\n\nColor Enhancements = 2.6\n\nContrast Enhancements = 1.1\n\nBrightness Enhancements = 1.1")
 
 # Clustering Model 
 model_name = st.sidebar.selectbox("machine learning model", model_dict.keys(), help="Machine Learning model to use for clustering pixels and colors together.")
@@ -135,6 +138,7 @@ if click or toggle:
 
     # (optional for later)
     # plot_rgb_3d(df_rgb) 
+    # plot_hsv_3d(df_rgb) 
 
     # calculate the RGB palette and cache it to session_state
     st.session_state["palette_rgb"] = get_palette(df_rgb, model_name, palette_size, sort_func=sort_func)
@@ -208,7 +212,10 @@ if click or toggle:
                     fig_bar = df.plot(kind="bar", backend="plotly", barmode="stack")
                     st.header("Example Bar Chart")
                     st.plotly_chart(fig_bar, use_container_width=True)
-                    
-            
+
+       
 else:
     st.info("👈  Click on 'Find Palette' ot turn on 'Toggle Update' to see the color palette.")
+
+st.sidebar.success(print_praise())   
+st.sidebar.write("---\n")
