@@ -4,7 +4,7 @@ A [Streamlit](https://streamlit.io/) 🎈 web app to help you tell your data sto
 
 
 
-[<img src="media/sophisticated_palette_screen.png" >](https://syasini-sophisticated-palette-app-dkc725.streamlitapp.com/)
+[<img src="media/example_sophisticated_palette.png" >](https://syasini-sophisticated-palette-app-dkc725.streamlitapp.com/)
 
 
 
