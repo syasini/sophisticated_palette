@@ -219,3 +219,7 @@ else:
 
 st.sidebar.success(print_praise())   
 st.sidebar.write("---\n")
+st.sidebar.caption("""You can check out the source code [here](https://github.com/syasini/sophisticated_palette).
+                      The `matplotlib` and `plotly` code snippets have been borrowed from [here](https://matplotlib.org/stable/users/prev_whats_new/dflt_style_changes.html) and [here](https://stackoverflow.com/questions/63011674/plotly-how-to-change-the-default-color-pallete-in-plotly).""")
+st.sidebar.write("---\n")
+
