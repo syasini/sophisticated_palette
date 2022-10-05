@@ -95,8 +95,10 @@ def display_matplotlib_code(palette_hex):
     st.write('Use this snippet in your code to make your color palette more sophisticated!')
     code = st.code(f"""
 import matplotlib as mpl
+from cycler import cycler
+
 palette = {palette_hex}
-mpl.rcParams["axes.prop_cycle"] = palette
+mpl.rcParams["axes.prop_cycle"] = cycler(color=palette)
     """
     )   
 
