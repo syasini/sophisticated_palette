@@ -26,7 +26,7 @@ st.sidebar.caption("Tell your data story with style.")
 st.sidebar.markdown("Made by [Siavash Yasini](https://www.linkedin.com/in/siavash-yasini/)")
 st.sidebar.markdown("---")
 
-toggle = st.sidebar.checkbox("Toggle Update", help="Continuously update pallete on every change in the app.")
+toggle = st.sidebar.checkbox("Toggle Update", value=True, help="Continuously update the pallete with every change in the app.")
 click = st.sidebar.button("Find Palette", disabled=bool(toggle))
 
 st.sidebar.markdown("---")
