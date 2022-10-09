@@ -150,7 +150,7 @@ def print_praise():
 
     praise_quotes = [
         '"When I stumbled upon this app, it was like I found a *pearl* among the oysetrs. Absolutely stunning! "\n\n-- Johannes Merveer',
-        '"I wish *Mona* was alive to see this masterpiece of an app! I\'m sure she would have *smiled* at it..."\n\n-- Leonarda va Dinci',
+        '"I wish *Mona* was alive to see this masterpiece! I\'m sure she would have *smiled* at it..."\n\n-- Leonarda va Dinci',
         '"I\'m sorry, what was that? Ah yes, great app. I use it every *night*. Five *stars*!"\n\n-- Vincent van Vogue',
         '"We\'ve all been waiting years for an app to make a *big splash* like this, and now it\'s finally here!\n[Can you hand me that towel please?]"\n\n-- David Hockknee',
         '"It makes such a great *impression* on you, doesn\'t it? I know where I\'ll be getting my palette for painting the next *sunrise*!"\n\n-- Cloud Moanet',
