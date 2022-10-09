@@ -24,4 +24,4 @@ or `plotly`
 
 It's that simple! Now why are you still here? Go check out the [app](https://syasini-sophisticated-palette-app-dkc725.streamlitapp.com/) and have fun. 
 
-If you feel like giving me a pat on the back press the ⭐️ button 👆 so I have something to count before falling sleep at night...
+Don't forget to ⭐️ the repo 👆 so you can find it easily later.
