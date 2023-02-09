@@ -24,6 +24,7 @@ st.image("logo.jpg")
 st.sidebar.title("Sophisticated Palette 🎨")
 st.sidebar.caption("Tell your data story with style.")
 st.sidebar.markdown("Made by [Siavash Yasini](https://www.linkedin.com/in/siavash-yasini/)")
+st.sidebar.caption("Look behind the scenes of Sophisticated Palette [here](https://blog.streamlit.io/create-a-color-palette-from-any-image/).")
 st.sidebar.markdown("---")
 
 toggle = st.sidebar.checkbox("Toggle Update", value=True, help="Continuously update the pallete with every change in the app.")
