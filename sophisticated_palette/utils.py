@@ -56,6 +56,7 @@ def get_df_rgb(img, sample_size):
     df = pd.DataFrame({"R": r, "G": g, "B": b}).sample(n=sample_size)
     return df
 
+@st.cache_data
 def get_palette(df_rgb, model_name, palette_size, sort_func="random"):
     """cluster pixels together and return a sorted color palette."""
     params = {n_cluster_arg[model_name]: palette_size}
