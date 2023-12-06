@@ -25,6 +25,13 @@ st.sidebar.title("Sophisticated Palette 🎨")
 st.sidebar.caption("Tell your data story with style.")
 st.sidebar.markdown("Made by [Siavash Yasini](https://www.linkedin.com/in/siavash-yasini/)")
 st.sidebar.caption("Look behind the scenes of Sophisticated Palette [here](https://blog.streamlit.io/create-a-color-palette-from-any-image/).")
+
+
+with st.sidebar.expander("See My Other Streamlit Apps"):
+    st.caption("Snowflake Cheat Sheet: [App](https://snow-flake-cheat-sheet.streamlit.app/) 🎈,  [Blog Post](https://medium.com/snowflake/the-ungifted-amateurs-guide-to-snowflake-449284e4bd72) 📝")
+    st.caption("Wordler: [App](https://wordler.streamlit.app/) 🎈,  [Blog Post](https://blog.streamlit.io/the-ultimate-wordle-cheat-sheet/) 📝")
+    st.caption("Koffee of the World: [App](https://koffee.streamlit.app/) 🎈")
+
 st.sidebar.markdown("---")
 
 toggle = st.sidebar.checkbox("Toggle Update", value=True, help="Continuously update the pallete with every change in the app.")
